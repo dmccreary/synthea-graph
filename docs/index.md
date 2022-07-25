@@ -1,6 +1,8 @@
-# Synthea to Graph
+# Synthetic Clinical Data Benchmarking
 
-This microsite is about the generation of synthetic clinical data and the loading of this data into a graph database such as [TigerGraph](tigergraph.com)
+![](img/banner.png)
+
+This microsite describes the generation of synthetic clinical data and the loading of this data into a distributed graph database such as [TigerGraph](tigergraph.com) for benchmarking purposes.
 
 The process of generating large collections of clinical graph data can be used for:
 
@@ -24,7 +26,25 @@ A typical use is the following command:
 $ synthea_run -p 10000
 ```
 
-Which will generate 10 thousand sample patient records.  The default format is FHIR, but we find that changing the config files to generate CSV files is more efficient.
+Which will generate the thousand sample patient records with the data broken into CSV files:
+
+```sh
+$ ls data/*.csv
+allergies.csv 12126 
+careplans.csv 20524 
+claims.csv 7041 
+conditions.csv 20525 
+encounters.csv 13190 
+immunizations.csv 6049 
+medications.csv 79675 
+observations.csv 1463 
+patients.csv 10000 
+procedures.csv 5380
+```
+
+You can then load this data into your graph database.
+
+The default export format is FHIR, but we find that changing the config files to generate CSV files is more efficient.
 
 After the files are generated, you can use the tools in this repository to load this data into TigerGraph.
 
