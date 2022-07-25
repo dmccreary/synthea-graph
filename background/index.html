@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Background - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">My Docs</a>
+                <a class="navbar-brand" href="..">My Docs</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,29 +33,29 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Synthetic Clinical Data Benchmarking</a>
+                            </li>
                             <li class="navitem active">
-                                <a href="." class="nav-link">Synthetic Clinical Data Benchmarking</a>
+                                <a href="./" class="nav-link">Background</a>
                             </li>
                             <li class="navitem">
-                                <a href="background/" class="nav-link">Background</a>
+                                <a href="../benchmarks/" class="nav-link">Benchmarks</a>
                             </li>
                             <li class="navitem">
-                                <a href="benchmarks/" class="nav-link">Benchmarks</a>
+                                <a href="../contacts/" class="nav-link">Clinical Graph Benchmarking Contacts</a>
                             </li>
                             <li class="navitem">
-                                <a href="contacts/" class="nav-link">Clinical Graph Benchmarking Contacts</a>
+                                <a href="../mission/" class="nav-link">Mission</a>
                             </li>
                             <li class="navitem">
-                                <a href="mission/" class="nav-link">Mission</a>
+                                <a href="../model/" class="nav-link">Model</a>
                             </li>
                             <li class="navitem">
-                                <a href="model/" class="nav-link">Model</a>
+                                <a href="../references/" class="nav-link">References</a>
                             </li>
                             <li class="navitem">
-                                <a href="references/" class="nav-link">References</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="tigergraph/" class="nav-link">Tigergraph</a>
+                                <a href="../tigergraph/" class="nav-link">Tigergraph</a>
                             </li>
                         </ul>
 
@@ -66,12 +66,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href=".." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="background/" class="nav-link">
+                                <a rel="next" href="../benchmarks/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -92,59 +92,12 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#synthetic-clinical-data-benchmarking" class="nav-link">Synthetic Clinical Data Benchmarking</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#background" class="nav-link">Background</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#typical-usage" class="nav-link">Typical Usage</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="synthetic-clinical-data-benchmarking">Synthetic Clinical Data Benchmarking</h1>
-<p><img alt="" src="img/banner.png" /></p>
-<p>This microsite describes the generation of synthetic clinical data and the loading of this data into a distributed graph database such as <a href="tigergraph.com">TigerGraph</a> for benchmarking purposes.</p>
-<p>The process of generating large collections of clinical graph data can be used for:</p>
-<ul>
-<li>Establishing the baseline performance for bringing an entire clinical record for a patent when there are millions of patients in the system</li>
-<li>Understanding the query performance impact of different representations of clinical data</li>
-<li>Understanding the performance impact of features such as enabling role-based access control</li>
-<li>Creating benchmarks for clinical queries</li>
-<li>Comparing the impact of new hardware and software on clinical systems</li>
-<li>Comparting graph queries to non-graph options</li>
-<li>Testing the performance and feasibility of new algorithms such as real-time fraud detection</li>
-</ul>
-<h2 id="background">Background</h2>
-<p><a href="https://synthetichealth.github.io/synthea/">Synthea</a> is a tool for generating synthetic healthcare records.  The current version generates a patient record and related clinical information such as allergies, claims, diagnosis, prescriptions, vaccinations, etc.  You can generate any arbitrary-sized patient population, you are only limited by the disk space on your servers.</p>
-<h2 id="typical-usage">Typical Usage</h2>
-<p>A typical use is the following command:</p>
-<pre><code class="language-sh">$ synthea_run -p 10000
-</code></pre>
-<p>Which will generate the thousand sample patient records with the data broken into CSV files:</p>
-<pre><code class="language-sh">$ ls data/*.csv
-allergies.csv 12126 
-careplans.csv 20524 
-claims.csv 7041 
-conditions.csv 20525 
-encounters.csv 13190 
-immunizations.csv 6049 
-medications.csv 79675 
-observations.csv 1463 
-patients.csv 10000 
-procedures.csv 5380
-</code></pre>
-<p>You can then load this data into your graph database.</p>
-<p>The default export format is FHIR, but we find that changing the config files to generate CSV files is more efficient.</p>
-<p>After the files are generated, you can use the tools in this repository to load this data into TigerGraph.</p></div>
+</div>
             </div>
         </div>
 
@@ -153,11 +106,11 @@ procedures.csv 5380
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -222,8 +175,3 @@ procedures.csv 5380
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.3.0
-Build Date UTC : 2022-07-25 21:19:08.656605+00:00
--->
