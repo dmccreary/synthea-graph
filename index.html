@@ -52,13 +52,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#welcome-to-mkdocs" class="nav-link">Welcome to MkDocs</a>
+            <li class="nav-item" data-level="1"><a href="#synthea-to-graph" class="nav-link">Synthea to Graph</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#commands" class="nav-link">Commands</a>
+            <li class="nav-item" data-level="2"><a href="#background" class="nav-link">Background</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#typical-usage" class="nav-link">Typical Usage</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -69,21 +69,26 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="synthea-to-graph">Synthea to Graph</h1>
+<p>This microsite is about the generation of synthetic clinical data and the loading of this data into a graph database such as <a href="tigergraph.com">TigerGraph</a></p>
+<p>The process of generating large collections of clinical graph data can be used for:</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>Establishing the baseline performance for bringing an entire clinical record for a patent when there are millions of patients in the system</li>
+<li>Understanding the query performance impact of different representations of clinical data</li>
+<li>Understanding the performance impact of features such as enabling role-based access control</li>
+<li>Creating benchmarks for clinical queries</li>
+<li>Comparing the impact of new hardware and software on clinical systems</li>
+<li>Comparting graph queries to non-graph options</li>
+<li>Testing the performance and feasibility of new algorithms such as real-time fraud detection</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<h2 id="background">Background</h2>
+<p><a href="https://synthetichealth.github.io/synthea/">Synthea</a> is a tool for generating synthetic healthcare records.  The current version generates a patient record and related clinical information such as allergies, claims, diagnosis, prescriptions, vaccinations, etc.  You can generate any arbitrary-sized patient population, you are only limited by the disk space on your servers.</p>
+<h2 id="typical-usage">Typical Usage</h2>
+<p>A typical use is the following command:</p>
+<pre><code class="language-sh">$ synthea_run -p 10000
+</code></pre>
+<p>Which will generate 10 thousand sample patient records.  The default format is FHIR, but we find that changing the config files to generate CSV files is more efficient.</p>
+<p>After the files are generated, you can use the tools in this repository to load this data into TigerGraph.</p></div>
             </div>
         </div>
 
@@ -164,5 +169,5 @@ docs/
 
 <!--
 MkDocs version : 1.3.0
-Build Date UTC : 2022-07-25 14:56:59.804456+00:00
+Build Date UTC : 2022-07-25 17:36:16.289444+00:00
 -->
