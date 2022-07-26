@@ -327,8 +327,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dell-tigergraph-2020-clincal-benchmark" class="md-nav__link">
-    Dell-TigerGraph 2020 Clincal Benchmark
+  <a href="#dell-tigergraph-2020-clinical-benchmark" class="md-nav__link">
+    Dell-TigerGraph 2020 Clinical Benchmark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synthetic-data-vault" class="md-nav__link">
+    Synthetic Data Vault
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mimic-iii" class="md-nav__link">
+    MIMIC-III
   </a>
   
 </li>
@@ -383,8 +397,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dell-tigergraph-2020-clincal-benchmark" class="md-nav__link">
-    Dell-TigerGraph 2020 Clincal Benchmark
+  <a href="#dell-tigergraph-2020-clinical-benchmark" class="md-nav__link">
+    Dell-TigerGraph 2020 Clinical Benchmark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synthetic-data-vault" class="md-nav__link">
+    Synthetic Data Vault
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mimic-iii" class="md-nav__link">
+    MIMIC-III
   </a>
   
 </li>
@@ -408,9 +436,15 @@
 
 
 <h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
-<h2 id="dell-tigergraph-2020-clincal-benchmark">Dell-TigerGraph 2020 Clincal Benchmark<a class="headerlink" href="#dell-tigergraph-2020-clincal-benchmark" title="Permanent link">&para;</a></h2>
+<h2 id="dell-tigergraph-2020-clinical-benchmark">Dell-TigerGraph 2020 Clinical Benchmark<a class="headerlink" href="#dell-tigergraph-2020-clinical-benchmark" title="Permanent link">&para;</a></h2>
 <p>[Graph Analytics in Healthcare Operations: A case study of TigerGraph on Dell EMC Infrastructure]
 (<a href="https://github.com/dmccreary/synthea-graph/blob/main/resources/Dell-TigerGraph-Case-Study-Optum.pdf">Dell TigerGraph Case Study</a>)</p>
+<h2 id="synthetic-data-vault">Synthetic Data Vault<a class="headerlink" href="#synthetic-data-vault" title="Permanent link">&para;</a></h2>
+<p>Our baseline clinical data leverages the power of generating patient-by-patient data based on real-life examples of conditions.</p>
+<p>If you have actual clinical data and you want to use this data to generate your own clinical data, we recommend using a tool such as the <a href="https://sdv.dev/">Synthetic Data Vault</a> to generate a sample of data.  SVD does a good job at generating flat tabular data with CSV files.  It is not strong at generating structure and relationships that we find in actual clinical graphs.</p>
+<h2 id="mimic-iii">MIMIC-III<a class="headerlink" href="#mimic-iii" title="Permanent link">&para;</a></h2>
+<p>MIMIC-III is a large, freely-available database comprising deidentified health-related data associated with over 40,000 patients who stayed in critical care units of the Beth Israel Deaconess Medical Center between 2001 and 2012.  This dataset is too small for us to use for benchmarking large distributed graphs, but we can use MIMIC-III to train synthetic generation tools.</p>
+<p><a href="https://physionet.org/content/mimiciii-demo/1.4/">MIMIC-III</a></p>
 
               
             </article>
