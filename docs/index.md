@@ -2,7 +2,7 @@
 
 ![](img/banner.png)
 
-This microsite describes the generation of synthetic clinical data and the loading of this data into a distributed graph database such as [TigerGraph](tigergraph.com) for benchmarking purposes.
+This microsite describes the generation of synthetic clinical data and the loading of this data into a distributed graph database such as [TigerGraph](http://tigergraph.com) for benchmarking purposes.
 
 The process of generating large collections of clinical graph data can be used for:
 
