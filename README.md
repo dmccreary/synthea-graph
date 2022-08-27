@@ -4,7 +4,7 @@ This site will allow you to generate large clinical datasets and load them to a 
 
 The microsite for this repository is here:
 
-    [https://dmccreary.github.io/synthea-graph/](https://dmccreary.github.io/synthea-graph/)
+    [http://dmccreary.github.io/synthea-graph](http://dmccreary.github.io/synthea-graph)
 
 ## Background
 
